@@ -15,6 +15,19 @@ def test_url_for():
     print(url_for('user_page', name='minu'))
     return "Test Page url_for 执行失败"
 
+#错误处理函数
+@app.errorhandler(404)
+def error_404(e):
+    return '404 Error',404
+
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.debug = True
