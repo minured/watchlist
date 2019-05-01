@@ -1,0 +1,82 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper {
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+#logo {
+	float: left;
+	height: 80px;
+	width: 150px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 25px;
+}
+
+
+#banner {
+	float: left;
+	height: 100px;
+	width: 500px;
+	margin-bottom: 5px;
+	margin-left: 25px;
+}
+
+#nav {
+	background-color: #F7B008;
+	height: 30px;
+	width: 690px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	clear: left;
+}
+
+.ms_nav_text {
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	padding-left: 10px;
+	font-family: "宋体";
+	font-weight: bold;
+}
+
+#content {
+	border: 4px double #F7B008;
+	letter-spacing: 2px;
+	width: 672px;
+	margin-bottom: 5px;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+.ms_title {
+	font-family: "隶书";
+	font-size: 26px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.ms_zw {
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-indent: 2em;
+	line-height: 25px;
+}
+.ms_img1 {
+	float: left;
+	margin: 10px;
+}
+.ms_img2 {
+	margin: 10px;
+	float: right;
+}

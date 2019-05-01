@@ -2,19 +2,31 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{ name }}'s Watchlist
-    </title>
+    <title>{{ user.name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='icon.jpg') }}">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
 </head>
 
 <body>
-    <h2>{{ name }}'s Watchlist</h2>
+    <h2>
+        <img alt="Avatar" class='avatar' src="{{ url_for('static', filename='icon.jpg') }}">{{ user.name }}'s Watchlist
+    </h2>
     <!--jinja2过滤器，获取movies的长度-->
-    <p>{{ movies|length}} Titles</p> 
-    <ul>
+    <p>{{ movies|length}} Titles</p>
+
+    <ul class="movie-list">
         {% for movie in movies%} {#迭代#}
-        <li>{{ movie.title }} - {{ movie.year }}</li> <!--类似于mivie['movie']-->
+        <li class="movie-list li">{{ movie.title }} - {{ movie.year }}</li> <!--类似于mivie['movie']-->
         {% endfor %}
     </ul>
+    <p>
+        <!--获取static下kitten.jpg的路径，花括号返回/static/images/kitten.jpg-->
+        <!-- url_for在jinja2中可以直接使用，在python中要导入 -->
+        <a><img alt="kitten" class='kitten' src="{{ url_for('static', filename = 'images/kitten.jpg') }}"></a>
+        
+        
+    </p>
+
 
     <footer>
         <small>&copy; 2019 <a href="https://github.com/minured" style="text-decoration: none" target='_blank'>My github</a></small>
