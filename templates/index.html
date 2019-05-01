@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ name }}'s Watchlist
+    </title>
+</head>
+
+<body>
+    <h2>{{ name }}'s Watchlist</h2>
+    <!--jinja2过滤器，获取movies的长度-->
+    <p>{{ movies|length}} Titles</p> 
+    <ul>
+        {% for movie in movies%} {#迭代#}
+        <li>{{ movie.title }} - {{ movie.year }}</li> <!--类似于mivie['movie']-->
+        {% endfor %}
+    </ul>
+
+    <footer>
+        <small>&copy; 2019 <a href="https://github.com/minured" style="text-decoration: none" target='_blank'>My github</a></small>
+    </footer>
+</body>
+</html>

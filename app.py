@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Welcome to My Watchlist!6666"
+def index():
+    #render_templte是渲染模板，（通传入的关键字参数，替换模板中的变量）
+    return render_template('index.html' , name=__name, movies=__movies)
 
 @app.route('/<name>')
 def hello_name(name):
@@ -20,12 +21,20 @@ def test_url_for():
 def error_404(e):
     return '404 Error',404
 
-
-
-
-
-
-
+#实际内容，用于模板中变量的替换
+__name = 'minu'
+__movies = [
+    {'title': 'My Neighbor Totoro', 'year': '1988'},
+    {'title': 'Dead Poets Society', 'year': '1989'},
+    {'title': 'A Perfect World', 'year': '1993'},
+    {'title': 'Leon', 'year': '1994'},
+    {'title': 'Mahjong', 'year': '1996'},
+    {'title': 'Swallowtail Butterfly', 'year': '1996'},
+    {'title': 'King of Comedy', 'year': '1999'},
+    {'title': 'Devils on the Doorstep', 'year': '1999'},
+    {'title': 'WALL-E', 'year': '2008'},
+    {'title': 'The Pork of Music', 'year': '2012'},
+]
 
 
 
